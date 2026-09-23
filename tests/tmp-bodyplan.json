@@ -1,0 +1,1 @@
+{"keywords":{"any":["테스트"]},"filters":{},"engine":{"pagesPerQuery":1,"mode":"http","fetchBody":true,"maxBodies":33},"rate":{"minDelayMs":1,"jitterMs":0,"perHostConcurrency":1,"backoff":{"startMs":1,"factor":2,"maxMs":2,"recoverAfterOk":1}},"output":{"dir":"./out/_test","resume":false},"sites":[{"id":"arca","enabled":true,"robots":"enforce","boards":["live"]}]}

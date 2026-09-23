@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<!-- META -->
+<meta charset="utf-8">
+<meta name="generator" content="Rhymix">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="유머, 이슈, 정보 커뮤니티. 개드립" />
+<meta name="description" content="유머, 이슈, 정보 커뮤니티. 개드립" />
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+<meta name="theme-color" content="#2e4361" />
+<meta name="csrf-token" content="YfL7aIXUDiAhkVQc" />
+
+<!-- TITLE -->
+<title>개드립 - DogDrip.Net 개드립</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/files/cache/assets/compiled/a115db9af24ca711b6428c87de2f5a664cbb282b.rhymix.scss.css?t=1750189249" />
+<link rel="stylesheet" href="/layouts/equeer_layout/assets/css/waves.min.css?t=1534754790" />
+<link rel="stylesheet" href="/modules/dogcon/assets/css/dogcon.css?t=1771306456" />
+<link rel="stylesheet" href="/modules/elasticsearch/tpl/css/highlight.css?t=1699776808" />
+<link rel="stylesheet" href="/modules/board/skins/eden/assets/css/theme/eddn.css?t=1763491031" />
+<link rel="stylesheet" href="/modules/board/skins/eden/assets/css/theme/eddn.scheme.css?t=1775037380" />
+<link rel="stylesheet" href="/modules/board/skins/eden/assets/css/theme/eddn.ad.css?t=1745470081" />
+<link rel="stylesheet" href="/modules/board/skins/eden/assets/css/theme/eddn.ad.scheme.css?t=1745470081" />
+<link rel="stylesheet" href="/modules/labeltinker/tpl/css/badge.css?t=1781985874" />
+<link rel="stylesheet" href="/widgets/content/skins/equeer_content_skin/assets/css/widget.css?t=1534754790" />
+<link rel="stylesheet" href="/widgets/newest_document/skins/xe_official/css/none_type.css?t=1606277180" />
+<link rel="stylesheet" href="/addons/notid/css/jquery.toast.css?t=1559166574" />
+<link rel="stylesheet" href="/widgetstyles/gray_style/style.css?t=1536069449" />
+<link rel="stylesheet" href="/common/css/fontawesome/all.css" />
+
+<!-- JS -->
+<script src="/common/js/jquery-2.2.4.js?t=1534729431"></script>
+<script src="/common/js/plugins/jquery.migrate/jquery-migrate-1.4.1.min.js?t=1534729431"></script>
+<script src="/common/js/plugins/cookie/js.cookie.min.js?t=1546001493"></script>
+<script src="/common/js/plugins/blankshield/blankshield.min.js?t=1534729431"></script>
+<script src="/common/js/plugins/uri/URI.min.js?t=1534729431"></script>
+<script src="/common/js/x.js?t=1728779518"></script>
+<script src="/common/js/common.js?t=1728779518"></script>
+<script src="/common/js/js_app.js?t=1534729431"></script>
+<script src="/common/js/xml_handler.js?t=1730397123"></script>
+<script src="/common/js/xml_js_filter.js?t=1730397123"></script>
+<script src="/modules/dogcon/assets/js/dogcon.js?t=1784818147"></script>
+<script src="/modules/membertinker/tpl/js/recent_modules.js?t=1759758394"></script>
+<script src="/addons/notid/js/jquery.toast.js?t=1559166574"></script>
+<script src="/modules/board/tpl/js/board.js?t=1728779518"></script>
+<script src="/modules/elasticsearch/tpl/js/highlight.js?t=1699778364"></script>
+<script src="https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js"></script>
+<script src="/modules/board/skins/eden/assets/js/jquery.cookie.js?t=1534754921"></script>
+<script src="/modules/board/skins/eden/assets/js/board.js?t=1775588546"></script>
+<script src="/widgets/content/skins/equeer_content_skin/assets/js/content_widget.js?t=1534754790"></script>
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.dogdrip.net/dogdrip/rss" />
+<link rel="alternate" type="application/atom+xml" title="Atom" href="https://www.dogdrip.net/dogdrip/atom" />
+
+<!-- ICONS AND OTHER LINKS -->
+<link rel="canonical" href="https://www.dogdrip.net/dogdrip" />
+<link rel="shortcut icon" href="/files/attach/xeicon/favicon.ico?t=1633793523" />
+<link rel="apple-touch-icon" href="/files/attach/xeicon/mobicon.png?t=1633918724" />
+
+<!-- OTHER HEADERS -->
+<meta property="og:title" content="개드립 - DogDrip.Net 개드립" />
+<meta property="og:site_name" content="DogDrip.Net 개드립" />
+<meta property="og:description" content="유머, 이슈, 정보 커뮤니티. 개드립" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.dogdrip.net/dogdrip" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:image" content="https://www.dogdrip.net/files/attach/xeicon/default_image.png?t=1637282948" />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<script>var dnvConfig = "eyJsb2FkZXJUaW1lb3V0IjoyMDAwLCJsb2FkZXJTb3VyY2VEb21haW4iOiJyYy4iLCJsb2FkZXJGYWxsYmFja0RvbWFpbiI6Im9jLiIsInBsYXllclRpbWVvdXQiOjI1MDAsInBsYXllclByb2dyZXNzVGltZW91dCI6MjUwMCwicGxheWVyU3RhbGxNcyI6MTI1MCwicGxheWVyU3RhcnR1cE1zIjoyMDAwLCJwbGF5ZXJEZWJvdW5jZUNvdW50IjoyLCJwbGF5ZXJTb3VyY2VEb21haW4iOiJyYy4iLCJwbGF5ZXJGYWxsYmFja0RvbWFpbiI6Im9jLiIsInNhbXBsZVJhdGUiOjAuMDEsImZhbGxiYWNrU2FtcGxlUmF0ZSI6MC4yNX0=";</script>
+<script>var dogconConfig = "eyJtYXhDb3VudCI6MSwidXNlQXJ0aWNsZVB1cmNoYXNlIjp0cnVlfQ==";</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4600736516793513" crossorigin="anonymous"></script>
+<script async src='https://www.googletagmanager.com/gtag/js?id=G-VB9WXG75K1'></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VB9WXG75K1');
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "338a72977fc348098e00896220e9f292"}'></script>
+
+<script type="text/javascript">window.__OPTAD360_SCRIPT_ID = "ddcbf907-f023-4525-bdf2-c918f4f4c7c1";</script>
+<script>window.gladsdk = window.gladsdk || { cmd: [] };</script>
+</head>
+
+<!-- BODY START -->
+<body>
+
+<!-- COMMON JS VARIABLES -->
+<script>
+	var default_url = "https://www.dogdrip.net/";
+	var current_url = "https://www.dogdrip.net/?search_target=title&search_keyword=%EC%95%B1&mid=dogdrip";
+	var request_uri = "https://www.dogdrip.net/";
+	var current_lang = xe.current_lang = "ko";
+	var current_mid = "dogdrip";
+	var http_port = null;
+	var https_port = null;
+	var enforce_ssl = true;
+	var cookies_ssl = false;
+	var rewrite_level = 1;
+	if (detectColorScheme) detectColorScheme();
+</script>
+
+<!-- PAGE CONTENT -->
+
+
+
+	
+	
+
+			<script query="20250318" id="SmDIVKiq" data-sdk="1.0.1" data-cfasync="false" src="//css-load.com/loader.min.js" charset="UTF-8" data="znbgfzfef99v9xxuf9ef9fvsf796fjjfifxs9c\f9u9vfpsfxubfxfx9v\f9jbfifxv9c\f9fifxu9hfffif1fxueppd9hxdfif7f6296fx9vfaf1uufafmdfa9i\f99ff9l99" onerror="let e=document.getElementById('SmDIVKiq'),t=document.createElement('script');
+for(let r=0;r<e.attributes.length;r++)t.setAttribute(e.attributes[r].name,e.attributes[r].value);
+let s=new window.URL(e.src),a=['css-load.com','fb.css-load.com','html-load.com','fb.html-load.com','content-loader.com','fb.content-loader.com','07c225f3.online'];
+if(void 0===window.as_retry&&(window.as_retry=0),window.as_retry>=a.length){let o=atob('RmFpbGVkIHRvIGxvYWQgd2Vic2l0ZSBwcm9wZXJseSBzaW5jZSA')+a[0]+atob('IGlzIGJsb2NrZWQuIFBsZWFzZSBhbGxvdyA')+a[0];
+throw alert(o),fetch('https://error-report.com/report?type=loader_pro&url='+btoa(location.href)+'&error='+btoa(o),{method:'POST'}).then(e=>e.text()).then(e=>{let r=document.createElement('iframe');
+r.src='https://info.error-report.com/modal?eventId='+e+'&error='+btoa(o),r.setAttribute('style','width: 100vw; height: 100vh; z-index: 2147483647; position: fixed; left: 0; top: 0;'),document.body.appendChild(r);
+let f=e=>{ if ('close-error-report' === e.data) r.remove(), window.removeEventListener('message', f); };
+window.addEventListener('message',f)}).catch(o=>{let l=navigator.language.toLowerCase().startsWith('ko')?decodeURIComponent(escape(atob('7J6Y66q765CcIOyVoOuTnOu4lOuhnSDtlYTthLDroZwg7Ju57Y6Y7J207KeAIOuhnOuUqeyXkCDsi6TtjKjtlZjsmIDsirXri4jri6QuIOyVoOuTnOu4lOuhneydhCDruYTtmZzshLHtmZTtlZwg7ZuEIOybueyCrOydtO2KuOulvCDsnbTsmqntlbTso7zshLjsmpQuICjsnpDshLjtlZwg64K07Jqp7J2AICftmZXsnbgnIOuyhO2KvOydhCDriIzrn6wg7ZmV7J247ZW07KO87IS47JqUKQ'))):atob('VGhpcyBwYWdlIGNvdWxkIG5vdCBiZSBsb2FkZWQgcHJvcGVybHkgZHVlIHRvIGluY29ycmVjdCAvIGJhZCBmaWx0ZXJpbmcgcnVsZShzKSBvZiBhZGJsb2NrZXJzIGluIHVzZS4gUGxlYXNlIGRpc2FibGUgYWxsIGFkYmxvY2tlcnMgdG8gY29udGludWUgdXNpbmcgdGhlIHdlYnNpdGUuIChjbGljayBPSyBpZiB5b3UnZCBsaWtlIHRvIGxlYXJuIG1vcmUp');
+confirm(l)?location.href='https://info.error-report.com/modal?eventId=&error='+btoa(o.toString()):location.reload()}),Error(o)}s.host=a[window.as_retry++],t.setAttribute('src',s.href),t.setAttribute('as-async','true'),e.setAttribute('id', e.getAttribute('id')+'_'),e.parentNode.insertBefore(t,e),e.remove();"></script>
+<noscript style="width: 100%; text-align: center; font-size: 20px; display: block; margin-top: 50px;">Please enable JavaScript in your browser to load website properly.<br /><br />Click <a href="https://www.enable-javascript.com/" target="_blank"><b>here</b></a> if you'd like to learn how.</noscript>
+	
+
+
+
+
+
+
+
+ 
+
+			
+
+
+
+
+<div class="eq section padding-remove background-color-base-grey">
+		
+
+
+
+				<nav id="navbar" class="eq navbar static navbar-small primary" style="min-height: 60px;">
+  <div class="eq navbar-container">
+    <div class="eq navbar-left">
+      
+      <a id="toggle-nav-drawer" class="eq nav-drawer-toggle navbar-item">
+        <div class="eq nav-icon">
+          <div class="line"></div>
+        </div>
+      </a>
+
+		<a class="eq logo-item link-reset light" href="/">
+	  <img src="https://www.dogdrip.net/files/attach/images/174688197/c1ed85abc045164e1c1ea4e3aa75f44f.png" alt="DogDrip.Net" class="eq logo-img normal">
+  <img src="https://www.dogdrip.net/files/attach/images/174688197/c1ed85abc045164e1c1ea4e3aa75f44f.png" alt="DogDrip.Net" class="eq logo-img dark">
+
+	
+	</a>
+	
+		
+
+<div class="eq navbar-item visible@m">
+    <ul class="eq navbar-nav">
+	<li class="active ">
+        <a href="/dogdrip">개드립</a>
+
+	<ul class="eq nav-dropdown nav-dropdown-list nav-dropdown-animation-left">
+	<li class="active">
+            <a href="/dogdrip">개드립</a>
+
+	          </li><li>
+            <a href="/?mid=dogdrip&amp;sort_index=popular">개드립 인기글</a>
+
+	          </li>        </ul>      </li><li>
+        <a href="/userdog">유저 개드립</a>
+
+	<ul class="eq nav-dropdown nav-dropdown-list nav-dropdown-animation-left">
+	<li>
+            <a href="/userdog">유저 개드립</a>
+
+	          </li><li>
+            <a href="https://www.dogdrip.net/?mid=userdog&amp;sort_index=popular">유저 개드립 인기글</a>
+
+	          </li><li>
+            <a href="/boomupbest">붐업 베스트</a>
+
+	          </li>        </ul>      </li><li>
+        <a href="/hotdeal">핫 딜</a>
+
+	<ul class="eq nav-dropdown nav-dropdown-list nav-dropdown-animation-left">
+	<li>
+            <a href="/hotdeal">핫딜 판</a>
+
+	          </li>        </ul>      </li><li>
+        <a href="/doc">읽을 거리 판</a>
+
+	<ul class="eq nav-dropdown nav-dropdown-list nav-dropdown-animation-left">
+	<li>
+            <a href="/doc">읽을 거리 판</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;sort_index=popular">인기글</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=18567749">기묘한 이야기</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=18568364">호러 괴담</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=18568507">감동</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=22526541">자연</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=18567755">유머</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=22526555">과학</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=22526565">역사</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=22526322">기타 지식</a>
+
+	          </li>        </ul>      </li><li>
+        <a href="/communitypage">커뮤니티</a>
+
+	<ul class="eq nav-dropdown nav-dropdown-list nav-dropdown-animation-left">
+	<li>
+            <a href="/stock">주식 / 재테크 판</a>
+
+	          </li><li>
+            <a href="/ib">인터넷 방송 판</a>
+
+	          </li><li>
+            <a href="/free">익명 판</a>
+
+	          </li><li>
+            <a href="/computer">컴퓨터 / IT 판</a>
+
+	          </li><li>
+            <a href="/movie">영상 판</a>
+
+	          </li><li>
+            <a href="/consultation">고민 상담 판</a>
+
+	          </li><li>
+            <a href="/vehicle">탈것 판</a>
+
+	          </li><li>
+            <a href="/coin">코인 판</a>
+
+	          </li><li>
+            <a href="/sports">스포츠 판</a>
+
+	          </li><li>
+            <a href="/cook">요리 판</a>
+
+	          </li><li>
+            <a href="/duck">덕후 판</a>
+
+	          </li><li>
+            <a href="/creation">창작 판</a>
+
+	          </li><li>
+            <a href="/music">음악 판</a>
+
+	          </li><li>
+            <a href="/politics">정치 사회 판</a>
+
+	          </li><li>
+            <a href="/genderissue">젠더 이슈 판</a>
+
+	          </li>        </ul>      </li><li>
+        <a href="/gamepage">게임 판</a>
+
+	<ul class="eq nav-dropdown nav-dropdown-list nav-dropdown-animation-left">
+	<li>
+            <a href="/game">게임 판</a>
+
+	          </li><li>
+            <a href="/gameserial">게임 연재 / 정보 판</a>
+
+	          </li><li>
+            <a href="/mobilegame">모바일 게임 판</a>
+
+	          </li><li>
+            <a href="/lostark">로스트아크</a>
+
+	          </li><li>
+            <a href="/diablo">디아블로</a>
+
+	          </li><li>
+            <a href="/lol">LOL</a>
+
+	          </li><li>
+            <a href="/console">콘솔 게임 판</a>
+
+	          </li><li>
+            <a href="/df">던전 앤 파이터</a>
+
+	          </li>        </ul>      </li><li>
+        <a href="/pic">놀이터</a>
+
+	<ul class="eq nav-dropdown nav-dropdown-list nav-dropdown-animation-left">
+	<li>
+            <a href="https://www.dogdrip.net/dogcon?sort_index=popular_week">개드립콘 - 주간 인기</a>
+
+	          </li><li>
+            <a href="/dogcon">개드립콘</a>
+
+	          </li><li>
+            <a href="/girlgroup">걸그룹 판</a>
+
+	          </li><li>
+            <a href="/pic">짤방 판</a>
+
+	          </li><li>
+            <a href="/surplustime">시간 때우기 (게임)</a>
+
+	          </li>        </ul>      </li><li>
+        <a href="/notice">기타</a>
+
+	<ul class="eq nav-dropdown nav-dropdown-list nav-dropdown-animation-left">
+	<li>
+            <a href="/notice">공지사항</a>
+
+	          </li><li>
+            <a href="/suggests">건의 신고 판</a>
+
+	          </li>        </ul>      </li>    </ul>
+  </div>
+	
+	
+    </div>
+
+    <div class="eq navbar-center">
+	
+
+	    </div>
+
+    <div class="eq navbar-right">
+	
+		
+	<div>
+  <a class="eq navbar-item navbar-icon" href="/randdog">
+    <div class="eq button-icon">
+      <i class="fas fa-random"></i>
+    </div>
+  </a>
+</div>
+
+<a class="eq navbar-item navbar-icon" href="boards">
+	<div class="eq button-icon">
+		<i class="fas fa-th"></i>
+	</div>
+</a>
+
+<div class="eq navbar-item visible@s">
+  <a class="eq toggle-login button  button-content  button-rounded button-shadow">로그인</a>
+</div>
+
+<a class="eq toggle-login navbar-item navbar-icon link-reset  hidden@s">
+  <div class="eq button  button-content  button-shadow button-rounded">
+    <i class="fas fa-sign-in-alt"></i>
+  </div>
+</a>
+    </div>
+  </div>
+
+	</nav>
+		<div>
+	<div id="login-modal" class="eq modal modal-login rebalance" style="z-index: 1110">
+    <div class="eq modal-content">
+  
+      <div class="eq modal-header">
+        <h5 class="eq text-muted margin-remove">로그인</h5>
+        <a id="login-modal-close" href="#" class="eq modal-close">
+          <div class="eq button-icon">
+			<i class="fas fa-times"></i>
+          </div>
+        </a>
+      </div>
+  
+      <div class="eq modal-body">
+	  
+	<form  action="/index.php?act=procMemberLogin" method="post" id="fo_member_login"><input type="hidden" name="error_return_url" value="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1" /><input type="hidden" name="mid" value="dogdrip" /><input type="hidden" name="ruleset" value="@login" />
+          <input type="hidden" name="success_return_url" value="https://www.dogdrip.net/?search_target=title&search_keyword=%EC%95%B1&mid=dogdrip" />
+          <input type="hidden" name="act" value="procMemberLogin" />
+          <input type="hidden" name="xe_validator_id" value="layouts/equeer_layout" />
+      
+          <fieldset>
+            <div class="eq form-field">
+	              <input id="id" class="eq input input-expand" type="text" name="user_id" ruiuired="" placeholder="아이디" tabindex="1" />
+              <label for="id">
+                <span class="eq input-title">아이디</span>
+              </label>
+	            </div>
+            
+            <div class="eq form-field">
+              <input class="eq input input-expand" type="password" name="password" required="" placeholder="비밀번호" tabindex="2" />
+              <label for="password">
+                <span class="eq input-title">비밀번호</span>
+              </label>
+            </div>
+      
+            <div class="eq flex padding-vertical-small">
+              <div class="eq flex text-left">
+                <input class="eq input-checkbox" type="checkbox" name="keep_signed" id="keepid-optn" data-lang="브라우저를 닫더라도 로그인이 계속 유지될 수 있습니다. 로그인 유지 기능을 사용할 경우 다음 접속부터는 로그인할 필요가 없습니다. 단, PC방, 학교, 도서관 등 공공장소에서 이용 시 개인정보가 유출될 수 있으니 꼭 로그아웃을 해주세요."
+                  value="Y" tabindex="3" />
+                <label for="keepid-optn">로그인 상태 유지</label>
+              </div>
+      
+              <div class="eq flex flex-right text-right">
+                <a class="eq text-small link-muted" href="/index.php?search_target=title&amp;search_keyword=%EC%95%B1&amp;mid=dogdrip&amp;act=dispMemberFindAccount" tabindex="5">ID/PW 찾기</a>
+              </div>
+            </div>
+            
+            <button type="submit" class="eq button button-primary button-expand button-rounded button-shadow margin-bottom-small" tabindex="4">로그인</button>
+          </fieldset>
+        </form>
+  
+        <div class="eq text-small text-center">
+          <div class="eq text-muted">아직 회원이 아니신가요?</div>
+		  <div class="eq">
+          <a href="/index.php?search_target=title&amp;search_keyword=%EC%95%B1&amp;mid=dogdrip&amp;act=dispMemberSignUpForm" class="eq link-primary" tabindex="6">회원가입 하기</a> / <a href="/index.php?search_target=title&amp;search_keyword=%EC%95%B1&amp;mid=dogdrip&amp;act=dispMemberResendAuthMail" class="eq link-primary" tabindex="6">인증메일 재발송</a>
+		  </div>
+        </div>
+  
+	  
+      </div>
+    </div>
+  
+    <div id="login-modal-bg" class="eq modal-background">
+      
+    </div>
+  </div>
+	</div>
+		<div id="nav-drawer" class="eq nav-drawer custom-scroll">
+  <div class="eq nav-drawer-content">
+
+	    <div class="eq background-color-primary inverse">
+      <a id="toggle-nav-login" class="eq toggle-login link-reset padding-small inline-block width-expand" href="#">
+        <div class="row">
+          <div class="col-auto eq text-middle">
+            <img src="/layouts/equeer_layout/assets/images/ic_profile_default.png" alt="" class="eq border-circle text-middle" width="40" height="40" />
+          </div>
+    
+          <div class="col-7 eq padding-left-remove inverse">
+            <span>로그인 및 회원가입</span>
+            <br>
+            <span class="eq text-small text-muted">회원가입하세요!</span>
+          </div>
+    
+          <div class="col-auto eq text-middle">
+			<i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </div>
+        </div>
+      </a>
+    </div>
+	
+    <ul class="eq nav-menu">
+	<li class="active parent open">
+        <a href="/dogdrip">개드립</a>
+	<button class="eq nav-chevron"></button>
+	<ul>
+	<li class="active">
+            <a href="/dogdrip">개드립</a>
+
+	          </li><li>
+            <a href="/?mid=dogdrip&amp;sort_index=popular">개드립 인기글</a>
+
+	          </li>        </ul>      </li><li class=" parent">
+        <a href="/userdog">유저 개드립</a>
+	<button class="eq nav-chevron"></button>
+	<ul>
+	<li>
+            <a href="/userdog">유저 개드립</a>
+
+	          </li><li>
+            <a href="https://www.dogdrip.net/?mid=userdog&amp;sort_index=popular">유저 개드립 인기글</a>
+
+	          </li><li>
+            <a href="/boomupbest">붐업 베스트</a>
+
+	          </li>        </ul>      </li><li class=" parent">
+        <a href="/hotdeal">핫 딜</a>
+	<button class="eq nav-chevron"></button>
+	<ul>
+	<li>
+            <a href="/hotdeal">핫딜 판</a>
+
+	          </li>        </ul>      </li><li class=" parent">
+        <a href="/doc">읽을 거리 판</a>
+	<button class="eq nav-chevron"></button>
+	<ul>
+	<li>
+            <a href="/doc">읽을 거리 판</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;sort_index=popular">인기글</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=18567749">기묘한 이야기</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=18568364">호러 괴담</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=18568507">감동</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=22526541">자연</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=18567755">유머</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=22526555">과학</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=22526565">역사</a>
+
+	          </li><li>
+            <a href="/?mid=doc&amp;category=22526322">기타 지식</a>
+
+	          </li>        </ul>      </li><li class=" parent">
+        <a href="/communitypage">커뮤니티</a>
+	<button class="eq nav-chevron"></button>
+	<ul>
+	<li>
+            <a href="/stock">주식 / 재테크 판</a>
+
+	          </li><li>
+            <a href="/ib">인터넷 방송 판</a>
+
+	          </li><li>
+            <a href="/free">익명 판</a>
+
+	          </li><li>
+            <a href="/computer">컴퓨터 / IT 판</a>
+
+	          </li><li>
+            <a href="/movie">영상 판</a>
+
+	          </li><li>
+            <a href="/consultation">고민 상담 판</a>
+
+	          </li><li>
+            <a href="/vehicle">탈것 판</a>
+
+	          </li><li>
+            <a href="/coin">코인 판</a>
+
+	          </li><li>
+            <a href="/sports">스포츠 판</a>
+
+	          </li><li>
+            <a href="/cook">요리 판</a>
+
+	          </li><li>
+            <a href="/duck">덕후 판</a>
+
+	          </li><li>
+            <a href="/creation">창작 판</a>
+
+	          </li><li>
+            <a href="/music">음악 판</a>
+
+	          </li><li>
+            <a href="/politics">정치 사회 판</a>
+
+	          </li><li>
+            <a href="/genderissue">젠더 이슈 판</a>
+
+	          </li>        </ul>      </li><li class=" parent">
+        <a href="/gamepage">게임 판</a>
+	<button class="eq nav-chevron"></button>
+	<ul>
+	<li>
+            <a href="/game">게임 판</a>
+
+	          </li><li>
+            <a href="/gameserial">게임 연재 / 정보 판</a>
+
+	          </li><li>
+            <a href="/mobilegame">모바일 게임 판</a>
+
+	          </li><li>
+            <a href="/lostark">로스트아크</a>
+
+	          </li><li>
+            <a href="/diablo">디아블로</a>
+
+	          </li><li>
+            <a href="/lol">LOL</a>
+
+	          </li><li>
+            <a href="/console">콘솔 게임 판</a>
+
+	          </li><li>
+            <a href="/df">던전 앤 파이터</a>
+
+	          </li>        </ul>      </li><li class=" parent">
+        <a href="/pic">놀이터</a>
+	<button class="eq nav-chevron"></button>
+	<ul>
+	<li>
+            <a href="https://www.dogdrip.net/dogcon?sort_index=popular_week">개드립콘 - 주간 인기</a>
+
+	          </li><li>
+            <a href="/dogcon">개드립콘</a>
+
+	          </li><li>
+            <a href="/girlgroup">걸그룹 판</a>
+
+	          </li><li>
+            <a href="/pic">짤방 판</a>
+
+	          </li><li>
+            <a href="/surplustime">시간 때우기 (게임)</a>
+
+	          </li>        </ul>      </li><li class=" parent">
+        <a href="/notice">기타</a>
+	<button class="eq nav-chevron"></button>
+	<ul>
+	<li>
+            <a href="/notice">공지사항</a>
+
+	          </li><li>
+            <a href="/suggests">건의 신고 판</a>
+
+	          </li>        </ul>      </li>    </ul>
+  </div>
+
+  <div id="nav-drawer-bg" class="eq nav-drawer-bg"></div>
+</div>
+
+
+		
+<main id="main">
+
+	  
+	  <div class="eq container ">
+	<div class="eq clayerbox-left">
+	<div class="eq clayerbox-left-ad" style="display:block;width:100%;height:600px">
+		<div class="ddnad-wrapper" data-oad-unit="eyJwb3NpdGlvbiI6InNpZGVfbCIsImFkVHlwZSI6InNpZGVfbCIsImNoYWluIjpbImdmYSIsImtha2FvIiwiY291cGFuZyJdLCJjaGFpbk9wdGlvbnMiOnsic2tpcExhc3RDbGVhbnVwIjpmYWxzZSwia2VlcERvbU9uRmFpbCI6ZmFsc2UsImRlYnVnTW9kZSI6ZmFsc2V9LCJrYWthbyI6eyJ1bml0IjoiREFOLTFpeWk4eHY1bTA3eTAiLCJ3aWR0aCI6MTYwLCJoZWlnaHQiOjYwMH0sImdvb2dsZSI6eyJzbG90IjoiNjQwNzgwNTg0OCIsIndpZHRoIjoxNjAsImhlaWdodCI6NjAwLCJjbGllbnQiOiJjYS1wdWItNDYwMDczNjUxNjc5MzUxMyIsImZvcm1hdCI6InZlcnRpY2FsIiwiZnVsbFdpZHRoUmVzcG9uc2l2ZSI6dHJ1ZX0sImdmYSI6eyJhZFVuaXRJZCI6ImRvZ2RyaXBfdW5pdF8xLU4xNDQ3MTIxNjciLCJ3aWR0aCI6MTYwLCJoZWlnaHQiOjYwMH0sImNvdXBhbmciOnsiaWQiOjg5NDI0NCwidGVtcGxhdGUiOiJjYXJvdXNlbCIsInRyYWNraW5nQ29kZSI6IkFGNDE3MzIwNCIsIndpZHRoIjoxNjAsImhlaWdodCI6NjAwLCJpc0ZpeGVkV2lkdGgiOnRydWUsImVuYWJsZUV4cGFuc2lvbiI6ZmFsc2V9LCJsb2ciOnsic3IiOjAuMDEsImN0IjoxfX0=" data-oad-desc="side_l" style="text-align: center; min-height: 600px; overflow: hidden !important; "><div class="ddnad-unit"></div></div>	</div></div>
+		  
+      <div class="eq section secontent background-color-content">
+																				
+		
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('video').each(function() {
+        if (!$(this).attr('playsinline')) {
+            $(this).attr('playsinline', '');
+        }
+    });
+
+    var storedVolume = localStorage.getItem('userVolume');
+    var isMuted = localStorage.getItem('userVolumeMuted') === 'true';
+    if (storedVolume) {
+        $('video').prop('volume', storedVolume);
+    } else {
+        $('video').prop('volume', 0.7);
+    }
+
+    $('video').prop('muted', isMuted);
+    $('video').on('volumechange', function() {
+        var changedVideo = this;
+        var volume = $(this).prop('volume');
+        var muted = $(this).prop('muted');
+
+        localStorage.setItem('userVolume', volume);
+        localStorage.setItem('userVolumeMuted', muted);
+
+        $('video').each(function() {
+            if (this !== changedVideo) {
+                $(this).prop('volume', volume);
+                $(this).prop('muted', muted);
+            }
+        });
+    });
+
+    $('iframe').each(function() {
+        var src = $(this).attr('src');
+        if (src && src.match(/youtube\.com\/embed/)) {
+            var wrapper = $('<div style="position: relative; width: 100%; max-width: 854px;">').insertBefore($(this));
+            var container = $('<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">').appendTo(wrapper);
+            $(this).appendTo(container).css({
+                'position': 'absolute',
+                'top': '0',
+                'left': '0',
+                'width': '100%',
+                'height': '100%'
+            });
+        }
+    });
+});
+</script>
+
+	
+		
+	
+			
+	
+
+					
+								
+			
+	
+				
+
+
+
+	
+
+
+
+
+
+
+
+
+<div class="ed board container">
+			<div class="ed ddnad ddnad-top ddnad-board">
+		<div class="ddnad-wrapper" data-oad-unit="eyJwb3NpdGlvbiI6InBjX3RvcCIsImFkVHlwZSI6InBjX3RvcCIsImNoYWluIjpbIm9wdGFkMzYwIiwia2FrYW8iLCJjb3VwYW5nIl0sImNoYWluT3B0aW9ucyI6eyJza2lwTGFzdENsZWFudXAiOmZhbHNlLCJrZWVwRG9tT25GYWlsIjpmYWxzZSwiZGVidWdNb2RlIjpmYWxzZX0sImtha2FvIjp7InVuaXQiOiJEQU4tMWp5N29na25oNm1veCIsIndpZHRoIjo3MjgsImhlaWdodCI6OTB9LCJnb29nbGUiOnsic2xvdCI6IjYxNTM1MTk5NzYiLCJ3aWR0aCI6NzI4LCJoZWlnaHQiOjE1MCwiY2xpZW50IjoiY2EtcHViLTQ2MDA3MzY1MTY3OTM1MTMiLCJmb3JtYXQiOiJhdXRvIiwiZnVsbFdpZHRoUmVzcG9uc2l2ZSI6dHJ1ZX0sIm9wdGFkMzYwIjp7ImlkIjoib2EtdG9wLWwyIiwibWluX2hlaWdodCI6MzAwfSwidGltZW91dCI6eyJnb29nbGUiOjEwMDAsImtha2FvIjoxNTAwLCJjb3VwYW5nIjoxMDAwLCJyZXNlcnZlIjoyMDAwfSwiY291cGFuZyI6eyJpZCI6ODk0MjQ1LCJ0ZW1wbGF0ZSI6ImNhcm91c2VsIiwidHJhY2tpbmdDb2RlIjoiQUY0MTczMjA0Iiwid2lkdGgiOjcyOCwiaGVpZ2h0IjoxNTAsImlzRml4ZWRXaWR0aCI6ZmFsc2UsImVuYWJsZUV4cGFuc2lvbiI6ZmFsc2V9LCJsb2ciOnsic3IiOjAuMDEsImN0IjoxfX0=" data-oad-desc="top" style="text-align: center; min-height: 300px; overflow: hidden !important; "><div class="ddnad-unit"></div></div>	</div>
+
+
+
+	<div class="ed board-list">
+	<div class="ed board-header padding-horizontal-small@s">
+	
+	<div class="ed board-header-info">
+							<div style="display: flex; align-items: end;">
+			<h3 class="ed display-inline-block">
+				<a class="ed link-primary text-bold _module_title" href="/dogdrip">
+	개드립				</a>
+			</h3>
+			</div>
+		
+			<div>
+								<span class="ed favorite">
+					<span class="favorite-button _favorite_off" style="display: ;" data-href="/dogdrip">
+					<i class="far fa-star fa-fw"></i>
+					<span class="favorite-text">즐겨찾기</span>
+				</span >
+				</span>
+					</div>
+	</div>
+
+						<div class="recent_wrap">
+		<div class="recent_container">
+			<a class="ed text-muted toggle-item recent_more" data-toggle-target=".recent_more_list">최근</a>
+			<div class="_recent_modules"></div>
+			<a class="ed toggle-item recent_more" data-toggle-target=".recent_more_list">전체</a>
+		</div>
+		<div class="recent_more_list">
+			<div class="more_head">
+				<div class="ed text-primary more_title"><i class="fas fa-th-list fa-fw"></i> 최근 방문 게시판</div>
+				<div class="more_clear">
+					<a class="_recent_clear"><i class="fas fa-trash-alt fa-fw"></i></a>
+				</div>
+			</div>
+			<div class="_recent_modules"></div>
+		</div>
+	</div>
+				
+	
+	
+
+
+</div>
+		<div class="ed padding-horizontal-small@s">
+	
+
+
+<div class="ed flex flex-wrap flex-middle margin-top-small margin-bottom-small">
+	<div class="ed flex flex-wrap flex-left flex-middle">
+	
+		
+		<a href="#" id="ed-search-toggle" class="ed button button-link margin-right-xsmall">
+			<i class="fas fa-search"></i>
+		</a>
+	
+				<div class="list-type-panel">
+										<a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;list_type=table" class="ed button button-link list-type-toggle" data-list-type="t" >
+							<i class="fas fa-th-list"></i>
+						</a>
+					</div>
+	
+	</div>
+
+	<div class="ed flex-right">
+					<a href="/dogdrip?sort_index=popular" class="ed link-primary margin-right-xsmall">
+				<i class="fas fa-award"></i> 인기글 
+					</a>
+			</div>
+</div>
+
+
+
+
+
+<div id="ed-search" class="ed modal">
+	<div class="ed modal-content">
+		<div class="ed modal-header">
+			<h5>검색</h5>
+			<a id="ed-search-close" href="#" class="ed modal-close">
+				<i class="fas fa-times"></i>
+			</a>
+		</div>
+
+		<div class="ed modal-body">
+			<form action="https://www.dogdrip.net/" method="get" onsubmit="return procFilter(this, search)" ><input type="hidden" name="act" value="" />
+				<input type="hidden" name="vid" value="" />
+				<input type="hidden" name="mid" value="dogdrip" />
+				<input type="hidden" name="category" value="" />
+				<div>
+					<select name="search_target" class="ed select select-default input-small input-expand margin-right-xsmall">
+	<option value="title_content">제목+내용</option><option value="title" selected="selected">제목</option><option value="content">내용</option><option value="comment">댓글</option><option value="nick_name">닉네임</option><option value="tag">태그</option>					</select>
+
+					<input type="text" name="search_keyword" value="앱" placeholder="검색" class="ed input input-default input-small input-expand" />
+				</div>
+
+				<div class="ed flex flex-right rebalance">
+					<button type="submit" class="ed button button-content text-bold text-primary">검색</button>
+					<button type="submit" id="ed-search-close-btn" class="ed button button-content">취소</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="ed-search-bg" class="ed modal-background"></div>
+
+</div>
+
+<script>
+	jQuery(document).ready(function($) {
+		$(function() {
+			$("#ed-search-toggle").click(function() {
+				$("#ed-search").addClass("on");
+				return false;
+			});
+
+			$("#ed-search-bg, #ed-search-close, #ed-search-close-btn").click(function() {
+				$("#ed-search").removeClass("on");
+				return false;
+			});
+		});
+	});
+</script>
+		</div>
+
+			<ul class="ed list">
+	
+	
+	
+									
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/009/859/724/100x100.crop.jpg?t=1789478482" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/724859009?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="724859009">
+	배달앱 리뷰로 사장님 흥분시키기													</a>
+		
+																<span class="ed text-primary text-xxsmall">33</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">111													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 7 일 전											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_349277669" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/39.gif" alt="[레벨:39]" title="포인트:1066129드립력 (66%), 레벨:39/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />뭐라해야하냐</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/724859009?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/725/361/724/100x100.crop.jpg?t=1789225309" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/724361725?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="724361725">
+	앱등이, &quot;애플의 최초는 삼성보다 우월하다&quot;													</a>
+		
+																<span class="ed text-primary text-xxsmall">83</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">68													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 10 일 전											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_177308373" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/37.gif" alt="[레벨:37]" title="포인트:620724드립력 (56%), 레벨:37/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />페스</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/724361725?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/012/194/724/100x100.crop.jpg?t=1789126370" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/724194012?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="724194012">
+	또 지랄 시작한 앱등이들 근황													</a>
+		
+																<span class="ed text-primary text-xxsmall">171</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">226													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 11 일 전											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_622372874" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/33.gif" alt="[레벨:33]" title="포인트:207664드립력 (72%), 레벨:33/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />성상품화개좋음</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/724194012?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+										<li class="ed flex flex-left flex-middle webzine">
+	
+<div id="npl-list" class="ed flex flex-left flex-middle" style="visibility: hidden;">
+			<div class="ed webzine-thumbnail-wrap">
+			<div class="icon-container">
+				<i class="baseThumb fas fa-file"></i>
+				<span class="overlay-text">AD</span>
+			</div>
+		</div>
+			<div class="ed flex padding-left-xsmall">
+		<div class="ed flex">
+					<div class="ed width-expand" style="display: flex; flex-direction: column; justify-content: center;">
+					<div class="ed list-header">
+						<div class="ed flex flex-left flex-middle">
+							<h5 class="ed title margin-remove">
+										<a class="ed link text-summary" target="_blank">
+	&nbsp;
+									</a>
+								</h5>
+						</div>
+					</div>
+					<div class="ed list-meta" style="display: flex; align-items: center; gap: 8px;">
+								<a class="ed text-muted text-xsmall text-summary" style="flex: 1; min-width: 0;">
+	&nbsp;
+							</a>
+							<div style="display: flex; align-items: center; gap: 3px; flex-shrink: 0;">
+							<span class="ed badge badge-ad-sm-v2">AD</span>
+							<span class="ed text-xsmall margin-right-xsmall text-default" style="white-space: nowrap;">광고</span>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+			<a class="ed overlay overlay-fill overlay-top" target="_blank"></a>
+</div>
+			</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/869/029/724/100x100.crop.jpg?t=1789047060" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/724029869?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="724029869">
+	삼엽충과 앱등이들 싸움이 존나 웃긴이유													</a>
+		
+																<span class="ed text-primary text-xxsmall">119</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">253													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 12 일 전											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_674427296" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/16.gif" alt="[레벨:16]" title="포인트:31628드립력 (95%), 레벨:16/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />세계는게이가지배한다</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/724029869?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/368/992/723/100x100.crop.jpg?t=1789032392" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/723992368?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="723992368">
+	데이팅앱으로 유럽남자와 결혼한 여자 ㄷㄷ													</a>
+		
+																<span class="ed text-primary text-xxsmall">94</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">208													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 12 일 전											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_391781114" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/36.gif" alt="[레벨:36]" title="포인트:491883드립력 (78%), 레벨:36/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />레모투스</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/723992368?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/207/080/723/100x100.crop.jpg?t=1788581054" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/723080207?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="723080207">
+	나도 나라 환생 앱 만들어봄													</a>
+		
+																<span class="ed text-primary text-xxsmall">83</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">67													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 17 일 전											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_103175594" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/6.gif" alt="[레벨:6]" title="포인트:3469드립력 (33%), 레벨:6/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />piazzolla</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/723080207?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/249/968/721/100x100.crop.jpg?t=1788043919" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/721968249?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="721968249">
+	광고는 기가막히게 잘하는데 막상 들어가보면 개쓰레기인 앱													</a>
+		
+																<span class="ed text-primary text-xxsmall">21</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">66													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 24 일 전											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_605673821" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/9.gif" alt="[레벨:9]" title="포인트:9344드립력 (20%), 레벨:9/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />Vampireholli</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/721968249?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/183/870/721/100x100.crop.jpg?t=1787984403" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/721870183?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="721870183">
+	메모리로 고생한 구글 내년2월까지 모든앱에 메모리사용량 최적화 강제													</a>
+		
+																<span class="ed text-primary text-xxsmall">41</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">74													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 24 일 전											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_263725019" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/21.gif" alt="[레벨:21]" title="포인트:48700드립력 (4%), 레벨:21/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />무한공백</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/721870183?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/569/885/721/100x100.crop.jpg?t=1787991269" class="ed webzine-thumbnail"/>
+											<i class="overlay-icon fas fa-play-circle"></i>
+								</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/721885569?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="721885569">
+	진성 앱등이였던 사람이 본 애플 광고 특징													</a>
+		
+																<span class="ed text-primary text-xxsmall">89</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">77													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 24 일 전											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_674427296" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/16.gif" alt="[레벨:16]" title="포인트:31628드립력 (95%), 레벨:16/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />세계는게이가지배한다</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/721885569?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/283/744/721/100x100.crop.jpg?t=1787907343" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/721744283?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="721744283">
+	성인 남성 폰에 가지고 있으면 창피한 앱 리스트													</a>
+		
+																<span class="ed text-primary text-xxsmall">89</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">62													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 25 일 전											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_177308373" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/37.gif" alt="[레벨:37]" title="포인트:620724드립력 (56%), 레벨:37/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />페스</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/721744283?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/298/264/720/100x100.crop.jpg?t=1787208567" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/720264298?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="720264298">
+	애플 EU 앱스토어 수수료20%로 변경 한국은 26%유지													</a>
+		
+																<span class="ed text-primary text-xxsmall">55</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">62													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 2026.08.20											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_263725019" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/21.gif" alt="[레벨:21]" title="포인트:48700드립력 (4%), 레벨:21/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />무한공백</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/720264298?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/331/071/720/100x100.crop.jpg?t=1787123009" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/720071331?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="720071331">
+	배달앱 개수작 근황ㅋㅋ													</a>
+		
+																<span class="ed text-primary text-xxsmall">60</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">75													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 2026.08.19											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_160579281" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/18.gif" alt="[레벨:18]" title="포인트:38062드립력 (59%), 레벨:18/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />효도하자</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/720071331?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/284/757/719/100x100.crop.jpg?t=1786973537" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/719757284?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="719757284">
+	앱으로 만나 결혼한 43세 남편, 28세 아내.jpg													</a>
+		
+																<span class="ed text-primary text-xxsmall">41</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">51													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 2026.08.18											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_670344608" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/24.gif" alt="[레벨:24]" title="포인트:67759드립력 (81%), 레벨:24/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />닉네임도없어</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/719757284?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/077/745/719/100x100.crop.jpg?t=1786968644" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/719745077?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="719745077">
+	치명적인 여자의 데이트앱 프로필													</a>
+		
+																<span class="ed text-primary text-xxsmall">21</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">63													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 2026.08.17											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_432138620" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/31.gif" alt="[레벨:31]" title="포인트:128603드립력 (2%), 레벨:31/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />일동안밥먹기</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/719745077?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/518/393/719/100x100.crop.jpg?t=1786780090" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/719393518?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="719393518">
+	대세에 따라 나와버린 앱 ㅋㅋ													</a>
+		
+																<span class="ed text-primary text-xxsmall">133</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">62													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 2026.08.15											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_677852359" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/4.gif" alt="[레벨:4]" title="포인트:1258드립력 (65%), 레벨:4/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />MZ툴딱</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/719393518?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/450/692/718/100x100.crop.jpg?t=1786454563" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/718692450?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="718692450">
+	ㅆㄷ] 최면앱 만화													</a>
+		
+																<span class="ed text-primary text-xxsmall">11</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">53													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 2026.08.12											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_492432334" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/12.gif" alt="[레벨:12]" title="포인트:16863드립력 (37%), 레벨:12/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />Tachibana</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/718692450?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/626/407/718/100x100.crop.jpg?t=1786342095" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/718407626?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="718407626">
+	윈도우11 날씨앱이 램 1기가 처묵처묵													</a>
+		
+																<span class="ed text-primary text-xxsmall">33</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">40													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 2026.08.10											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_426702486" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/29.gif" alt="[레벨:29]" title="포인트:97116드립력 (70%), 레벨:29/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />밤에맑음</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/718407626?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/005/390/718/100x100.crop.jpg?t=1786336927" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/718390005?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="718390005">
+	윈도우 11 기본 날씨 앱 근황.JPG													</a>
+		
+																<span class="ed text-primary text-xxsmall">28</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">36													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 2026.08.10											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_361398038" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/10.gif" alt="[레벨:10]" title="포인트:12758드립력 (76%), 레벨:10/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />민트초코스팸</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/718390005?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/632/092/718/100x100.crop.jpg?t=1786175849" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/718092632?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="718092632">
+	윈도우 11 기본앱을 삭제해도 용량이 늘어나지않은 이유													</a>
+		
+																<span class="ed text-primary text-xxsmall">23</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">72													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 2026.08.09											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_263725019" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/21.gif" alt="[레벨:21]" title="포인트:48700드립력 (4%), 레벨:21/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />무한공백</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/718092632?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 			
+					<li class="ed flex flex-left flex-middle webzine">
+						
+										
+					<div class="ed webzine-thumbnail-wrap">
+										<div class="icon-container">
+								<img src="/files/thumbnails/347/113/718/100x100.crop.jpg?t=1786183008" class="ed webzine-thumbnail"/>
+										</div>
+						</div>
+	 
+					<div class="ed flex padding-left-xsmall">
+					<div class="ed flex">
+						<div class="ed width-expand">
+							<div class="ed list-header">
+												<div style="display: flex; align-items: center;">
+													<h5 class="ed title margin-remove">
+					
+		
+														<a href="/dogdrip/718113347?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed title-link" data-document-srl="718113347">
+	불법도박앱 방치중인 구글													</a>
+		
+																<span class="ed text-primary text-xxsmall">13</span>
+		
+	
+												</h5>
+										</div>
+								 							</div>
+							<div class="ed flex list-meta">
+								<div class="ed flex flex-left flex-middle">
+			
+					
+					
+													<span class="ed text-xxsmall margin-right-xsmall" >
+												<span class="ed text-xxsmall text-primary"><i class="far fa-thumbs-up"></i></span>
+												<span class="ed text-xxsmall text-primary">79													</span>
+											</span>
+															<span class="ed text-muted text-xxsmall margin-right-xsmall">
+												<i class="far fa-clock"></i> 2026.08.08											</span>
+	
+				 								</div>
+								<div class="ed flex flex-right flex-middle">
+															<span class="ed text-xsmall inline-flex flex-left flex-middle margin-right-xsmall">
+	<a href="#popup_menu_area" class="ed text-xsmall link-reset text-default member_569172016" onclick="return false"><img src="https://www.dogdrip.net/modules/point/icons/ddcoa/39.gif" alt="[레벨:39]" title="포인트:995991드립력 (37%), 레벨:39/50" class="xe_point_level_icon" style="vertical-align:middle;margin:0px 3px 2px 0px;" />당근이지당근</a>											</span>
+						 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a href="/dogdrip/718113347?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=1" class="ed overlay overlay-fill overlay-top"></a>
+
+				</li>
+	 		
+			</ul>
+		
+	<div class="ed padding-horizontal-small@s flex flex-middle margin-top-small margin-bottom-xsmall">
+  <div class="ed flex flex-left">
+	
+	  </div>
+  
+  <div class="ed flex-right">
+				<a href="/dogdrip?sort_index=popular" class="ed link-primary margin-right-xsmall">
+			<i class="fas fa-award"></i> 인기글 
+				</a>
+		  </div>
+</div>
+	<div class="ed pagination-container padding-horizontal-small@s">
+	
+	  <ul class="ed pagination pagewide">
+		<li class="active">
+        <a><span>1</span></a> 
+      </li>				<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=2"><span>2</span></a>
+      </li>			<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=3"><span>3</span></a>
+      </li>			<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=4"><span>4</span></a>
+      </li>			<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=5"><span>5</span></a>
+      </li>			<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=6"><span>6</span></a>
+      </li>			<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=7"><span>7</span></a>
+      </li>			<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=8"><span>8</span></a>
+      </li>			<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=9"><span>9</span></a>
+      </li>	  </ul>
+	<div class="ed next pagination pagewide">
+	    <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=10">
+	  <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>	  <ul class="ed pagination pagenarrow">
+		<li class="active">
+        <a><span>1</span></a> 
+      </li>				<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=2"><span>2</span></a>
+      </li>			<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=3"><span>3</span></a>
+      </li>			<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=4"><span>4</span></a>
+      </li>			<li>
+        <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=5"><span>5</span></a>
+      </li>	  </ul>
+	<div class="ed next pagination pagenarrow">
+	    <a href="/dogdrip?search_target=title&amp;search_keyword=%EC%95%B1&amp;page=6">
+	  <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
+		</div>					<div class="ed">
+				<div class="xe-widget-wrapper " style="margin: 30px 0px"><div style="*zoom:1;padding: 0px 0px 0px 0px !important;">
+<div class="">
+			<div class="row eq widget widget-gallery widget-gallery-shadow">
+						  <div class="eq widget-gallery-item-wrap position-relative col-6  col-md-3 col-sm-6" style="">
+
+    <div class="eq widget-gallery-item">
+      
+		          <div class="eq widget-gallery-thumbnail-wrap">
+	            <img class="eq widget-gallery-thumbnail" src="/files/thumbnails/655/099/726/100x75.crop.jpg?t=1790107703" alt="/files/thumbnails/655/099/726/100x75.crop.jpg?t=1790107703">
+            
+	          </div>
+				      
+      <div class="eq widget-gallery-item-body overlay overlay-bottom width-expand inverse">
+	        <p class="eq text-xsmall text-bold margin-bottom-xsmall">개드립</p>
+	
+	  
+	  
+	  
+	  
+	          <h6 class="eq text-normal margin-top-remove margin-bottom-xsmall">
+            <span class="eq text-default">초딩 아들 심부름 후기..jpg</span>
+  
+	          </h6>
+          
+	  
+	  
+	
+	      </div>
+
+	
+      <a class="eq overlay overlay-top overlay-fill link-reset" href="https://www.dogdrip.net/726099655"></a>
+    </div>
+    
+  </div>
+				  <div class="eq widget-gallery-item-wrap position-relative col-6  col-md-3 col-sm-6" style="">
+
+    <div class="eq widget-gallery-item">
+      
+		          <div class="eq widget-gallery-thumbnail-wrap">
+	            <img class="eq widget-gallery-thumbnail" src="/files/thumbnails/480/069/726/100x75.crop.jpg?t=1790084826" alt="/files/thumbnails/480/069/726/100x75.crop.jpg?t=1790084826">
+            
+	          </div>
+				      
+      <div class="eq widget-gallery-item-body overlay overlay-bottom width-expand inverse">
+	        <p class="eq text-xsmall text-bold margin-bottom-xsmall">개드립</p>
+	
+	  
+	  
+	  
+	  
+	          <h6 class="eq text-normal margin-top-remove margin-bottom-xsmall">
+            <span class="eq text-default">여초 커뮤에서 논쟁중인 남친 여친 싸움 토론</span>
+  
+	          </h6>
+          
+	  
+	  
+	
+	      </div>
+
+	
+      <a class="eq overlay overlay-top overlay-fill link-reset" href="https://www.dogdrip.net/726069480"></a>
+    </div>
+    
+  </div>
+				  <div class="eq widget-gallery-item-wrap position-relative col-6  col-md-3 col-sm-6" style="">
+
+    <div class="eq widget-gallery-item">
+      
+		          <div class="eq widget-gallery-thumbnail-wrap">
+	            <div class="eq widget-gallery-thumbnail" style="width: px; height: 75px;">
+              <span style="line-height: 75px;"></span>
+            </div>
+	          </div>
+				      
+      <div class="eq widget-gallery-item-body overlay overlay-bottom width-expand inverse">
+	        <p class="eq text-xsmall text-bold margin-bottom-xsmall">개드립</p>
+	
+	  
+	  
+	  
+	  
+	          <h6 class="eq text-normal margin-top-remove margin-bottom-xsmall">
+            <span class="eq text-default">ㅇㅆㅇㅆ)여초딩쟝이 노는날을 말해주는 만화</span>
+  
+	          </h6>
+          
+	  
+	  
+	
+	      </div>
+
+	
+      <a class="eq overlay overlay-top overlay-fill link-reset" href="https://www.dogdrip.net/726109673"></a>
+    </div>
+    
+  </div>
+				  <div class="eq widget-gallery-item-wrap position-relative col-6  col-md-3 col-sm-6" style="">
+
+    <div class="eq widget-gallery-item">
+      
+		          <div class="eq widget-gallery-thumbnail-wrap">
+	            <img class="eq widget-gallery-thumbnail" src="/files/thumbnails/145/130/726/100x75.crop.jpg?t=1790127285" alt="/files/thumbnails/145/130/726/100x75.crop.jpg?t=1790127285">
+            
+	          </div>
+				      
+      <div class="eq widget-gallery-item-body overlay overlay-bottom width-expand inverse">
+	        <p class="eq text-xsmall text-bold margin-bottom-xsmall">개드립</p>
+	
+	  
+	  
+	  
+	  
+	          <h6 class="eq text-normal margin-top-remove margin-bottom-xsmall">
+            <span class="eq text-default">처음 만났는데 말도없고 어색한 상대</span>
+  
+	          </h6>
+          
+	  
+	  
+	
+	      </div>
+
+	
+      <a class="eq overlay overlay-top overlay-fill link-reset" href="https://www.dogdrip.net/726130145"></a>
+    </div>
+    
+  </div>
+			</div>
+
+
+	</div></div></div>
+			</div>
+		</div>
+
+</div>
+      </div>
+	  
+						<div class="eq clayerbox-right">
+			
+			
+					<div class="eq clayerbox-right-list">
+<div class="xe-widget-wrapper " style="font-size: small; float: left; width: 100%; margin: 0px; height: 200px; background-image: none; background-position: 0px 0px; background-repeat: repeat;">
+
+<div class="grayWidgetStyle grayWS_default">
+  <h2 class="title lightgray"><span class="title">
+	<a href="/dogdrip?sort_index=popular">	개드립 인기글	</a>  </span></h2>
+	<div class="grayWidgetStyle_content_Wrapper">
+		<div class="grayWidgetStyle_content"  style="margin:5px;">
+	<div style="*zoom:1;padding: 0px 0px 0px 0px !important;">
+<div class="latest_nonetype">
+    <ul>
+						        <li>
+	          <span class="title">
+						<a title="32살에 9급 입직하여 39살에 5급이 된 사나이" href="/dogdrip/726155624?sort_index=popular&amp;page=1" data-document-srl="726155624"> 32살에 9급 입직하여 39살에 5급이 된 사나이 </a>
+		          </span>
+        </li>
+			        <li>
+	          <span class="title">
+						<a title="베트남 애들이랑 너무 대화하지 마라" href="/dogdrip/726145622?sort_index=popular&amp;page=1" data-document-srl="726145622"> 베트남 애들이랑 너무 대화하지 마라 </a>
+		          </span>
+        </li>
+			        <li>
+	          <span class="title">
+						<a title="베트남 실시간 근황 . 한국 불법주차" href="/dogdrip/726144185?sort_index=popular&amp;page=1" data-document-srl="726144185"> 베트남 실시간 근황 . 한국 불법주차 </a>
+		          </span>
+        </li>
+			        <li>
+	          <span class="title">
+						<a title="영화 ㅈ망하자 핑계부터 찿는 감독ㄷㄷ" href="/dogdrip/726141637?sort_index=popular&amp;page=1" data-document-srl="726141637"> 영화 ㅈ망하자 핑계부터 찿는 감독ㄷㄷ </a>
+		          </span>
+        </li>
+			        <li>
+	          <span class="title">
+						<a title="스캔들 혹평 나나 “입술 필러 맞은거 잘못..죄송”" href="/dogdrip/726137137?sort_index=popular&amp;page=1" data-document-srl="726137137"> 스캔들 혹평 나나 “입술 필러 맞은거 잘못..죄송” </a>
+		          </span>
+        </li>
+			        <li>
+	          <span class="title">
+						<a title="욕 써서 보냈더니 판매자가 환불해줌.jpg" href="/dogdrip/726137174?sort_index=popular&amp;page=1" data-document-srl="726137174"> 욕 써서 보냈더니 판매자가 환불해줌.jpg </a>
+		          </span>
+        </li>
+			        <li>
+	          <span class="title">
+						<a title="트위터에서 베트남 애들 상대로 무쌍찍는 중인 사람" href="/dogdrip/726137035?sort_index=popular&amp;page=1" data-document-srl="726137035"> 트위터에서 베트남 애들 상대로 무쌍찍는 중인 사람 </a>
+		          </span>
+        </li>
+			        <li>
+	          <span class="title">
+						<a title="오늘 관심 최고의 한일전" href="/dogdrip/726135709?sort_index=popular&amp;page=1" data-document-srl="726135709"> 오늘 관심 최고의 한일전 </a>
+		          </span>
+        </li>
+		    </ul>
+</div></div>    </div>
+    <div class="grayWidgetStyle_blank"></div>
+	</div>
+	<div class="grayWidgetStyle_blank"></div>
+</div>
+</div>
+			  </div>	
+	<div class="eq clayerbox-right-ad">
+		<div class="ddnad-wrapper" data-oad-unit="eyJwb3NpdGlvbiI6InNpZGVfciIsImFkVHlwZSI6InNpZGVfciIsImNoYWluIjpbIm9wdGFkMzYwIiwiZ2ZhIiwiY291cGFuZyJdLCJjaGFpbk9wdGlvbnMiOnsic2tpcExhc3RDbGVhbnVwIjpmYWxzZSwia2VlcERvbU9uRmFpbCI6ZmFsc2UsImRlYnVnTW9kZSI6ZmFsc2V9LCJrYWthbyI6eyJ1bml0IjoiREFOLTFodjYwZ3Z0Z2V4aXAiLCJ3aWR0aCI6MTYwLCJoZWlnaHQiOjYwMH0sImdvb2dsZSI6eyJzbG90IjoiMTY5MDM4MDM3OSIsIndpZHRoIjoxNjAsImhlaWdodCI6NjAwLCJjbGllbnQiOiJjYS1wdWItNDYwMDczNjUxNjc5MzUxMyIsImZvcm1hdCI6InZlcnRpY2FsIiwiZnVsbFdpZHRoUmVzcG9uc2l2ZSI6dHJ1ZX0sImdmYSI6eyJhZFVuaXRJZCI6ImRvZ2RyaXBfdW5pdF8yLU4xNDQ3MTIxNjciLCJ3aWR0aCI6MTYwLCJoZWlnaHQiOjYwMH0sIm9wdGFkMzYwIjp7ImlkIjoib2Etc2tyIiwibWluX2hlaWdodCI6NjAwfSwiY291cGFuZyI6eyJpZCI6ODk0MjQzLCJ0ZW1wbGF0ZSI6ImNhcm91c2VsIiwidHJhY2tpbmdDb2RlIjoiQUY0MTczMjA0Iiwid2lkdGgiOjE2MCwiaGVpZ2h0Ijo2MDAsImlzRml4ZWRXaWR0aCI6dHJ1ZSwiZW5hYmxlRXhwYW5zaW9uIjpmYWxzZX0sImxvZyI6eyJzciI6MC4wMSwiY3QiOjF9fQ==" data-oad-desc="side_r" style="text-align: center; min-height: 600px; overflow: hidden !important; "><div class="ddnad-unit"></div></div>			  </div>			</div>
+  </div>
+
+		</main>
+	<div class="eq footer ">
+  <div class="eq container" style="max-width: 960px;">
+	
+    <div class="eq padding-horizontal-small@s padding-bottom-default">
+      <ul class="eq footer-menu">
+	<li class="active">
+          <a href="/dogdrip">개드립</a>
+        </li><li>
+          <a href="/userdog">유저 개드립</a>
+        </li><li>
+          <a href="/hotdeal">핫 딜</a>
+        </li><li>
+          <a href="/doc">읽을 거리 판</a>
+        </li><li>
+          <a href="/communitypage">커뮤니티</a>
+        </li><li>
+          <a href="/gamepage">게임 판</a>
+        </li><li>
+          <a href="/pic">놀이터</a>
+        </li><li>
+          <a href="/notice">기타</a>
+        </li>      </ul>
+	      <ul class="eq footer-menu">
+	    <li>
+		<button type="button" class="eq button button-primary button-rounded button-shadow darkmode-toggle" style="padding: 6px 10px;"><i class="fas fa-adjust"></i>&nbsp;색상 반전</button>
+		</li>
+		      </ul>
+
+      <span class="eq text-xsmall text-muted">
+		<div>Copyright (c) DogDrip.net All rights reserved.</div>
+<div>Contact us, master at dogdrip dot net</div>
+<div>
+<a href="/policy">이용약관</a> | 
+<a href="/privacy">개인정보처리방침</a>
+</div>	      </span>
+    </div>
+  </div>
+</div>
+
+</div>
+<script type="text/javascript"> elasticsearch_highlight("", "\uc571"); </script>
+<script type="text/javascript" src="https://ssl.pstatic.net/adimg3.search/adpost/js/adpost_show_ads_v2.min.js"></script>
+<script type="text/javascript"> function executeNaverAdpostV2() { NAVER_ADPOST_V2({ channel: "dogdrip.ch2", pageSize: 1, query: "앱", url: "https://www.dogdrip.net/dogdrip?search_target=title&search_keyword=%EC%95%B1", callback: "handle_naver_ads_response_1", }); } </script>
+
+
+<!-- ETC -->
+<div id="rhymix_alert"></div>
+<div id="rhymix_debug_panel"></div>
+<div id="rhymix_debug_button"></div>
+
+<!-- BODY JS -->
+<script src="/modules/boardtinker/assets/js/dnvplayer.qz.js?t=1788518368"></script>
+<script src="/modules/boardtinker/assets/js/dnvloader.qz.js?t=1780996453"></script>
+<script src="/modules/boardtinker/assets/js/dnv.autoload.qz.js?t=1788518368"></script>
+<script src="/files/cache/js_filter_compiled/e15ac6109469379e976c469edd7ad968.ko.compiled.js?t=1750189249"></script>
+<script src="/files/cache/js_filter_compiled/d01f3c55dee01c1b9384ee79f27f315c.ko.compiled.js?t=1750189249"></script>
+<script src="/files/cache/js_filter_compiled/7b9c374914c5e9b53204b07209ce2b16.ko.compiled.js?t=1750189249"></script>
+<script src="/addons/autolink/autolink_events.js?t=1760126169"></script>
+<script src="/addons/autolink/autolink_unified.js?t=1756205694"></script>
+<script src="/modules/dnad/assets/js/nad.js?t=1761303223"></script>
+<script src="//get.optad360.io/sf/ddcbf907-f023-4525-bdf2-c918f4f4c7c1/plugin.min.js"></script>
+<script src="/modules/dnad/assets/js/uf.js?t=1788518368"></script>
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script src="/layouts/equeer_layout/assets/js/header.js?t=1750125854"></script>
+<script src="/layouts/equeer_layout/assets/js/visited.js?t=1733360319"></script>
+<script src="/layouts/equeer_layout/assets/js/waves.min.js?t=1640390957"></script>
+
+</body>
+</html>

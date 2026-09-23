@@ -1,0 +1,64 @@
+{
+  "_readme": "게임 무료배포만 찾는 설정. node crawl.mjs --config config.games.json",
+
+  "keywords": {
+    "_주석": "regex 하나로 '게임 플랫폼' AND '무료' 를 동시에 요구한다. any 를 비워두면 regex 만 본다.",
+    "any": [],
+    "all": [],
+    "none": [
+      "무료배송", "무료 배송", "배송비", "무료체험", "무료대여", "무료주차",
+      "통신비", "요금제", "무료통화", "무료나눔 삽니다", "구인", "삽니다"
+    ],
+    "regex": [
+      "(?=.*(에픽|EPIC|Epic|GOG|스팀|Steam|STEAM|유비소프트|Ubisoft|우분|험블|Humble|아마존게임|프라임게이밍|Prime Gaming|itch))(?=.*(무료|(?<![\\d,])0\\s*원|공짜|free|Free|FREE))"
+    ],
+    "searchQueries": {
+      "_주석": "사이트 검색창에 넣을 말. 넓게 긁고 위 regex 로 좁힌다.",
+      "use": ["에픽", "무료", "스팀", "0원", "무료배포"]
+    }
+  },
+
+  "filters": {
+    "_주석": "아직 기간이 남은 것을 찾으므로 최근 한 달만 본다.",
+    "sinceDate": "2026-08-25",
+    "minTitleLength": 4,
+    "maxPerSite": 400
+  },
+
+  "engine": {
+    "mode": "auto",
+    "pagesPerQuery": 3,
+    "headless": true,
+    "offscreenWindow": false,
+    "keepSession": true,
+    "navigationTimeoutMs": 25000,
+    "fetchBody": true,
+    "maxBodies": 60
+  },
+
+  "rate": {
+    "minDelayMs": 1200,
+    "jitterMs": 900,
+    "perHostConcurrency": 1,
+    "backoff": { "startMs": 8000, "factor": 2, "maxMs": 300000, "recoverAfterOk": 8 }
+  },
+
+  "output": {
+    "dir": "./out/games",
+    "resume": false
+  },
+
+  "sites": [
+    { "id": "ppomppu", "enabled": true, "robots": "enforce", "boards": ["ppomppu"] },
+    { "id": "arca", "enabled": true, "robots": "enforce", "boards": ["hotdeal"] },
+    {
+      "id": "ruliweb",
+      "enabled": true,
+      "robots": "enforce",
+      "listMode": "browse",
+      "browsePages": 8,
+      "boards": ["market/board/1020"],
+      "_주석": "robots 가 검색 경로를 막아서 목록 훑기. 1020=핫딜/예판"
+    }
+  ]
+}

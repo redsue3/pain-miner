@@ -1,0 +1,20 @@
+# 받아온 결과와 실행 중 생기는 것들 — 저장소에 둘 이유가 없다
+out/
+.session/
+
+# 의존성
+node_modules/
+
+# 비밀값은 저장소에 들어오면 안 된다.
+# 실제 값은 ~/.config/pain-miner/ 와 ~/.ssh/ 에 두고, 코드에는 경로만 적는다.
+*.key
+*.pem
+.env
+.env.*
+**/secrets.json
+
+# 임시 파일 (작업 중 만들었다 지우는 것들)
+_*.mjs
+_*.html
+_*.json
+*.log

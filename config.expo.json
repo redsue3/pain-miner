@@ -1,0 +1,65 @@
+{
+  "_readme": "국내 IT 박람회·전시회 일정.  node crawl.mjs --config config.expo.json",
+
+  "keywords": {
+    "_주석": "행사명에서 IT 성격을 판별한다. 전시장 캘린더에는 모든 분야가 섞여 들어오므로 이 목록이 곧 필터다.",
+    "any": [
+      "IT", "AI", "인공지능", "전자", "반도체", "소프트웨어", "SW", "소프트웨이브",
+      "로봇", "로보", "드론", "무인", "자동화", "스마트", "디지털", "테크", "tech",
+      "게임", "VR", "AR", "XR", "메타버스", "블록체인", "클라우드", "보안", "데이터",
+      "센서", "디스플레이", "배터리", "이차전지", "통신", "네트워크", "컴퓨터",
+      "모빌리티", "자율주행", "양자", "퀀텀", "반도체대전", "전자전", "정보보호"
+    ],
+    "all": [],
+    "none": [
+      "웨딩", "결혼", "베이비", "유아", "임신", "출산",
+      "커피", "베이커리", "주류", "와인", "식품", "농업", "수산",
+      "반려동물", "애견", "뷰티", "화장품", "헤어", "네일",
+      "부동산", "분양", "귀농", "유학박람회", "취업박람회", "채용박람회",
+      "치과", "의료기기", "한방", "요양", "장례", "핸드메이드", "아트쇼", "미술"
+    ],
+    "regex": [],
+    "searchQueries": { "use": ["전시"] }
+  },
+
+  "filters": {
+    "_주석": "행사 시작일 기준. 오늘 이후 행사만 보려면 오늘 날짜로 올린다.",
+    "sinceDate": "2026-10-01",
+    "minTitleLength": 3,
+    "maxPerSite": 500
+  },
+
+  "engine": {
+    "mode": "auto",
+    "pagesPerQuery": 1,
+    "headless": true,
+    "offscreenWindow": false,
+    "keepSession": true,
+    "navigationTimeoutMs": 30000,
+    "fetchBody": false,
+    "maxBodies": 0
+  },
+
+  "rate": {
+    "_주석": "코엑스는 robots.txt 에 Crawl-delay: 10 이 있어 어댑터가 10초를 강제한다.",
+    "minDelayMs": 2000,
+    "jitterMs": 1000,
+    "perHostConcurrency": 1,
+    "backoff": { "startMs": 10000, "factor": 2, "maxMs": 300000, "recoverAfterOk": 5 }
+  },
+
+  "output": { "dir": "./out/expo", "resume": false },
+
+  "sites": [
+    {
+      "id": "coex", "enabled": true, "robots": "enforce",
+      "listMode": "browse", "browsePages": 1,
+      "boards": ["2026-10", "2026-11", "2026-12"]
+    },
+    {
+      "id": "kintex", "enabled": true, "robots": "enforce",
+      "listMode": "browse", "browsePages": 1,
+      "boards": ["2026-10", "2026-11", "2026-12"]
+    }
+  ]
+}

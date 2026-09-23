@@ -1,0 +1,77 @@
+{
+  "_readme": "게임에 쓰이는 알고리즘 글 모으기.  node crawl.mjs --config config.algo.json",
+
+  "keywords": {
+    "_주석": "검색은 searchQueries.use 로 넓게 긁고, any 로 제목을 거른다. 용어가 구체적이라 오탐이 적다.",
+    "any": [
+      "알고리즘", "자료구조",
+      "길찾기", "경로탐색", "패스파인딩", "pathfinding", "A*", "에이스타", "다익스트라", "dijkstra",
+      "네비메시", "navmesh", "네비게이션 메시",
+      "충돌처리", "충돌검사", "충돌판정", "collision", "물리엔진", "레이캐스트", "raycast",
+      "쿼드트리", "quadtree", "옥트리", "octree", "공간분할", "BSP", "BVH",
+      "절차적", "프로시저럴", "procedural", "던전생성", "맵생성", "지형생성",
+      "펄린", "perlin", "심플렉스 노이즈", "노이즈 함수", "웨이브 함수 붕괴", "wave function collapse",
+      "유한상태기계", "상태머신", "FSM", "행동트리", "비헤이비어 트리", "behavior tree",
+      "미니맥스", "minimax", "알파베타", "몬테카를로", "MCTS",
+      "넷코드", "netcode", "롤백", "rollback", "지연보상", "보간", "interpolation", "예측 보정",
+      "AI 길찾기", "적 AI", "NPC AI", "무리 행동", "보이드", "boids",
+      "렌더링 파이프라인", "컬링", "culling", "LOD", "셰이더 최적화",
+      "오브젝트 풀", "object pool", "ECS", "엔티티 컴포넌트"
+    ],
+    "all": [],
+    "none": [
+      "구인", "구합니다", "채용", "외주", "팝니다", "삽니다", "분양",
+      "인증", "일베", "정치", "대선"
+    ],
+    "regex": [],
+    "searchQueries": {
+      "_주석": "사이트 검색창에 실제로 넣는 말. 짧고 흔한 것 위주여야 결과가 나온다.",
+      "use": ["알고리즘", "길찾기", "충돌", "최적화", "자료구조", "절차적 생성", "상태머신"]
+    }
+  },
+
+  "filters": {
+    "sinceDate": "2023-01-01",
+    "minTitleLength": 5,
+    "maxPerSite": 500
+  },
+
+  "engine": {
+    "mode": "auto",
+    "pagesPerQuery": 3,
+    "headless": true,
+    "offscreenWindow": false,
+    "keepSession": true,
+    "navigationTimeoutMs": 25000,
+    "fetchBody": true,
+    "maxBodies": 40
+  },
+
+  "rate": {
+    "minDelayMs": 1400,
+    "jitterMs": 900,
+    "perHostConcurrency": 1,
+    "backoff": { "startMs": 8000, "factor": 2, "maxMs": 300000, "recoverAfterOk": 8 }
+  },
+
+  "output": {
+    "dir": "./out/algo",
+    "resume": false
+  },
+
+  "sites": [
+    {
+      "id": "dcinside",
+      "enabled": true,
+      "robots": "enforce",
+      "boards": ["programming", "mgallery/game_dev", "mgallery/algo", "mgallery/godot"],
+      "_주석": "game_dev·algo·godot 은 마이너 갤러리라 경로에 mgallery 가 붙는다"
+    },
+    {
+      "id": "arca",
+      "enabled": true,
+      "robots": "enforce",
+      "boards": ["live"]
+    }
+  ]
+}

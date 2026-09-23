@@ -1,0 +1,113 @@
+{
+  "_readme": "이 파일만 고치면 됩니다. 키워드·대상 사이트·수집 속도가 전부 여기에 있습니다.",
+  "keywords": {
+    "_주석": "any=하나라도 포함(OR) / all=전부 포함(AND) / none=하나라도 있으면 제외(NOT) / regex=정규식",
+    "any": [
+      "이런 앱 없나",
+      "이런 기능 없나",
+      "자동으로 안되나",
+      "일일이 입력",
+      "매번 까먹",
+      "엑셀로 관리"
+    ],
+    "all": [],
+    "none": [
+      "공지",
+      "이벤트",
+      "당첨",
+      "경품",
+      "쿠폰",
+      "쿠팡",
+      "특가",
+      "핫딜",
+      "파트너스",
+      "자살",
+      "유서"
+    ],
+    "regex": [],
+    "searchQueries": {
+      "_주석": "사이트 검색창에 실제로 넣을 말. 비워두면 any 목록을 그대로 씁니다.",
+      "use": []
+    }
+  },
+  "filters": {
+    "sinceDate": "2024-01-01",
+    "minTitleLength": 6,
+    "maxPerSite": 2000
+  },
+  "engine": {
+    "_주석": "mode: auto=HTTP 먼저 쓰고 막히면 브라우저 / http=HTTP만 / browser=항상 브라우저",
+    "mode": "auto",
+    "pagesPerQuery": 2,
+    "headless": true,
+    "offscreenWindow": false,
+    "keepSession": true,
+    "navigationTimeoutMs": 25000
+  },
+  "rate": {
+    "_주석": "호스트마다 따로 적용됩니다. 느리게 가는 것이 차단을 피하는 가장 확실한 방법입니다.",
+    "minDelayMs": 1500,
+    "jitterMs": 1200,
+    "perHostConcurrency": 1,
+    "backoff": {
+      "startMs": 8000,
+      "factor": 2,
+      "maxMs": 300000,
+      "recoverAfterOk": 8
+    }
+  },
+  "output": {
+    "dir": "./out",
+    "resume": true
+  },
+  "sites": [
+    {
+      "id": "arca",
+      "enabled": true,
+      "robots": "enforce",
+      "boards": [
+        "live",
+        "hotdeal"
+      ]
+    },
+    {
+      "id": "dogdrip",
+      "enabled": true,
+      "robots": "enforce",
+      "boards": [
+        "title",
+        "title_content"
+      ]
+    },
+    {
+      "id": "ppomppu",
+      "enabled": true,
+      "robots": "enforce",
+      "boards": [
+        "freeboard",
+        "computer",
+        "car",
+        "baby",
+        "humor"
+      ]
+    },
+    {
+      "id": "dcinside",
+      "enabled": true,
+      "robots": "enforce",
+      "boards": [
+        "programming",
+        "mgallery/game_dev"
+      ],
+      "_주석": "robots.txt 의 User-agent:* 는 Allow:/ 다. 단 갤러리 14곳(47,cat,dog,stock_new,stock_new2,produce48,singo,metakr,ib_new,baseball_new8,d_fighter_new1,m_entertainer1,salgoonews,sportsseoul)은 금지 — 넣지 말 것"
+    },
+    {
+      "id": "ruliweb",
+      "enabled": false,
+      "robots": "enforce",
+      "boards": [
+        "300143"
+      ]
+    }
+  ]
+}
