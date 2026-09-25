@@ -46,8 +46,8 @@
   },
   "rate": {
     "_주석": "호스트마다 따로 적용됩니다. 느리게 가는 것이 차단을 피하는 가장 확실한 방법입니다.",
-    "minDelayMs": 1500,
-    "jitterMs": 1200,
+    "minDelayMs": 2500,
+    "jitterMs": 1500,
     "perHostConcurrency": 1,
     "backoff": {
       "startMs": 8000,

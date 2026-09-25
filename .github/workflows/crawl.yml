@@ -1,0 +1,44 @@
+name: 커뮤니티 수집
+
+on:
+  schedule:
+    - cron: '0 22 * * *'   # 매일 07:00 KST (UTC 22:00)
+  workflow_dispatch: {}     # 수동 실행 버튼
+
+permissions:
+  contents: write
+
+concurrency:
+  group: crawl
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - run: npm ci
+
+      - name: robots 판정 먼저 확인
+        run: node crawl.mjs --robots
+
+      - name: 수집 실행
+        run: node crawl.mjs
+
+      - name: 결과 커밋
+        run: |
+          git config user.name "pain-miner-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f out/results.csv out/results.jsonl out/seen.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "새로운 결과 없음"
+          else
+            git commit -m "자동 수집: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
