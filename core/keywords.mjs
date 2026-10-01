@@ -24,10 +24,15 @@ function toRegex(src) {
 const norm = (s) => String(s ?? '').toLowerCase().replace(/\s+/g, ' ').trim();
 
 /** "일일이 입력" 처럼 띄어쓴 구절 → 모든 토큰이 들어있는지 */
+//
+// 반대 방향도 맞춰야 한다: 검색어를 붙여 쓴 "불편한점" 은 본문의 "불편한 점" 과도 맞아야 한다.
+// 디시 검색은 띄어쓰기를 무시하고 찾아주는데, 여기서 글자 그대로 비교하니 받아온 25건을
+// 전부 버렸다 (실측 2026-10-01: 디시 0건). 그래서 공백을 지운 글에서도 한 번 더 찾는다.
 function phraseHit(hay, phrase) {
   const tokens = norm(phrase).split(' ').filter(Boolean);
   if (!tokens.length) return false;
-  return tokens.every((t) => hay.includes(t));
+  const tight = hay.replace(/\s+/g, '');
+  return tokens.every((t) => hay.includes(t) || tight.includes(t));
 }
 
 export class Matcher {

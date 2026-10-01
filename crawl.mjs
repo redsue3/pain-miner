@@ -202,6 +202,18 @@ process.on('SIGINT', () => {
   console.log('\n중단 요청 — 지금까지 받은 것을 저장합니다.');
   stop = true;
 });
+// 웹 화면의 '중단' 은 stdin 으로 'stop' 을 보낸다. Windows 에서는 SIGINT 를 보내면
+// 핸들러가 돌기 전에 프로세스가 죽어서, 몇 시간 모은 결과가 통째로 사라진다.
+if (!process.stdin.isTTY) {
+  process.stdin.on('data', (d) => {
+    if (/stop/.test(String(d)) && !stop) {
+      console.log('\n중단 요청 — 지금까지 받은 것을 저장합니다.');
+      stop = true;
+    }
+  });
+  process.stdin.on('error', () => {});
+  process.stdin.unref?.();   // 수집이 끝났는데 stdin 때문에 프로세스가 안 끝나는 일을 막는다
+}
 
 const since = cfg.filters.sinceDate ?? null;
 const minLen = cfg.filters.minTitleLength ?? 0;
@@ -210,8 +222,12 @@ const maxPer = cfg.filters.maxPerSite ?? Infinity;
 console.log(`사이트 ${sites.length} · 검색어 ${queries.length} · 페이지 ${cfg.engine.pagesPerQuery} · 모드 ${cfg.engine.mode}`);
 console.log(`브라우저: ${cfg.engine.headless ? '헤드리스(창 없음)' : cfg.engine.offscreenWindow ? '창 띄우되 화면 밖' : '창 보임'}\n`);
 
-outer:
-for (const site of sites) {
+// 사이트들은 동시에 돈다. 예전엔 한 곳씩 차례로 돌아서, 한 사이트가 차단 대기(429 → 수십 초)에
+// 걸리면 나머지가 전부 그 뒤에 줄을 섰다 (실측 2026-10-01: 아카에서 3분 넘게 멈춤).
+// 속도 제한은 호스트마다 따로 걸리므로(limiter) 동시에 돌아도 한 사이트에 몰리지 않는다.
+await Promise.all(sites.map(crawlSite));
+
+async function crawlSite(site) {
   const ad = ADAPTERS[site.id];
   let perSite = 0;
   // browse 모드: 검색을 쓰지 않고 게시판 목록을 훑는다. 키워드는 받아온 제목에 적용한다.
@@ -222,13 +238,23 @@ for (const site of sites) {
 
   for (const board of site.boards) {
     for (const q of qs) {
+      // '끝까지 찾기' 는 쪽수를 수백으로 준다. 결과가 그보다 먼저 끝나면 거기서 멈춘다:
+      //   - 목록이 비었다            → 마지막 쪽을 넘었다
+      //   - 이번 쪽 글을 이 검색에서 전부 이미 봤다 → 끝 쪽을 계속 다시 보여주는 사이트
+      //   - 연속으로 3번 못 받았다    → 막혔거나 끊겼다. 남은 쪽도 안 될 것이다
+      const seenHere = new Set();
+      let failRun = 0;
       for (let page = 1; page <= pages; page++) {
-        if (stop) break outer;
-        if (perSite >= maxPer) continue;
+        if (stop) return;
+        if (perSite >= maxPer) break;
 
         const r = await fetchList(ad, site, board, q, page);
-        process.stdout.write(`\r[${ad.label}/${board}] "${q}" ${page}쪽 · 수집 ${st.kept} · 실패 ${st.fail} · robots차단 ${st.robots}          `);
-        if (!r) continue;
+        process.stdout.write(`\r[${ad.label}/${board}] "${q ?? '목록 훑기'}" ${page}쪽 · 수집 ${st.kept} · 실패 ${st.fail} · robots차단 ${st.robots}          `);
+        if (!r) {
+          if (++failRun >= 3) { notes.add(`${ad.label}/${board}: 연속 실패로 ${page}쪽에서 멈춤`); break; }
+          continue;
+        }
+        failRun = 0;
 
         let posts = [];
         try {
@@ -239,6 +265,10 @@ for (const site of sites) {
           continue;
         }
         st.parsed += posts.length;
+        if (!posts.length) break;
+        const before = seenHere.size;
+        for (const p of posts) seenHere.add(p.dedupKey ?? p.url);
+        if (seenHere.size === before) break;
 
         for (const p of posts) {
           // 같은 URL 인데 회차가 다른 행사가 있다 (코엑스). 어댑터가 dedupKey 를 주면 그걸 쓴다.

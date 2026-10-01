@@ -25,6 +25,7 @@ import { resolve, join, sep } from 'node:path';
 import { execFile } from 'node:child_process';
 import { ADAPTERS, readDate, clean, extractBlock, textOf, openTag } from './adapters/index.mjs';
 import { Matcher } from './core/keywords.mjs';
+import { tagRow, TAGS, OTHER } from './core/tags.mjs';
 import { Limiter } from './core/limiter.mjs';
 import { Store } from './core/store.mjs';
 import { gate, check } from './core/robots.mjs';
@@ -113,6 +114,11 @@ if (run('1.1')) {
   eq('config.games.json 의 정규식이 유효하다', mCfg.badRegex.length, 0);
   ok('config.games.json: 무료 게임을 잡는다', mCfg.test('[에픽게임즈] 쇼군 쇼다운 (무료/무료)').pass);
   ok('config.games.json: 할인 게임에 안 속는다', !mCfg.test('[스팀] Watch_Dogs 2 할인 (3,250원)').pass);
+
+  // (2026-10-01) 검색어를 붙여 쓰면 본문의 띄어 쓴 표현을 전부 버렸다 — 디시 25건 받아 0건.
+  const mTight = new Matcher({ any: ['불편한점'] });
+  ok('붙여 쓴 검색어가 띄어 쓴 글과도 일치', mTight.test('써보니 불편한 점 이 많네').pass);
+  ok('붙여 쓴 검색어 — 상관없는 글은 여전히 탈락', !mTight.test('써보니 편한 점 이 많네').pass);
 
   const mq = new Matcher({ any: ['가', '나'] });
   eq('searchQueries 기본은 any', mq.searchQueries({ any: ['가', '나'] }).join(','), '가,나');
@@ -261,6 +267,22 @@ if (run('1.6')) {
   ok('isNew 는 표시하지 않는다 (확인 전용)',
     new Store(TMP + '5', { resume: false }).isNew('https://a.com/y') === true
     && new Store(TMP + '5', { resume: false }).isNew('https://a.com/y') === true);
+}
+
+if (run('1.7')) {
+  head('1.7', '주제 태그 (규칙)');
+  const t = (r) => tagRow({ site: 'dcsearch', board: '', title: '', ...r });
+  ok('게임 갤러리 → 게임', t({ board: '메이플랜드(메이플스토리)', title: '보스 후기' }).includes('게임'));
+  ok('갤러리가 정하면 제목은 안 본다', t({ board: '메이플랜드(메이플스토리)', title: '자취방 곰팡이' })[0] === '게임');
+  ok('갤러리로 못 정하면 제목을 본다', t({ board: '아무말', title: '자취방 곰팡이 어떻게 없앰' }).includes('생활'));
+  ok('뽐뿌 게시판 id → 주제', tagRow({ site: 'ppomppu', board: 'car', title: 'x' }).includes('자동차'));
+  eq('아무것도 안 걸리면 기타', tagRow({ site: 'dogdrip', board: 'title', title: 'ㅋㅋㅋ' }).join(), OTHER);
+  ok('태그는 최대 2개', t({ board: '', title: '게임하다 주식 코인 자동차 운전 병원' }).length <= 2);
+  // (2026-10-01) 실제로 잘못 붙었던 것들
+  ok("'아이패드' 갤러리가 '패드' 때문에 게임이 되지 않는다", !t({ board: '아이패드' }).includes('게임'));
+  ok("'메이드카페' 갤러리가 '카페' 때문에 음식이 되지 않는다", !t({ board: '한국 메이드카페 갤러리' }).includes('음식'));
+  ok("'기술' 이 '술' 때문에 음식이 되지 않는다", !t({ board: '기술' }).includes('음식'));
+  ok('모든 태그가 TAGS 목록 안에 있다', [t({ board: '야구' }), t({ title: '청소' })].flat().every((x) => [...TAGS, OTHER].includes(x)));
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
