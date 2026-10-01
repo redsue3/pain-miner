@@ -48,8 +48,17 @@ const CHALLENGE_TITLE = /just a moment|잠시만 기다|checking your browser|at
 let _browser = null;
 let _cfg = {};
 
+// 사이트들이 동시에 돌기 때문에 브라우저가 필요해지는 순간 여럿이 한꺼번에 launch 를 부를 수 있다.
+// 같은 프로필로 Chrome 을 두 번 띄우면 프로필 잠김으로 둘 다 실패한다. 띄우는 중이면 그걸 기다린다.
+let _launching = null;
 export async function launch(cfg = {}) {
   if (_browser?.connected) return _browser;
+  if (_launching) return _launching;
+  _launching = launchNow(cfg).finally(() => { _launching = null; });
+  return _launching;
+}
+
+async function launchNow(cfg) {
   _cfg = cfg;
 
   const args = [
