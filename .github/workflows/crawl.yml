@@ -29,7 +29,7 @@ jobs:
         run: node crawl.mjs --robots
 
       - name: 수집 실행
-        run: node crawl.mjs
+        run: node crawl.mjs --max-minutes 20   # timeout-minutes(30) 전에 스스로 멈추고 저장
 
       - name: 결과 커밋
         run: |

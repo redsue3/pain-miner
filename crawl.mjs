@@ -7,6 +7,7 @@
 //   node crawl.mjs --robots           대상 사이트들의 robots.txt 판정만 출력
 //   node crawl.mjs --show             지금 설정으로 무엇을 수집할지 미리보기 (요청 안 함)
 //   node crawl.mjs --head             창을 띄워서 실행 (셀렉터 디버깅용)
+//   node crawl.mjs --max-minutes 20   이 시간이 지나면 멈추고 그때까지 받은 것을 저장
 //
 // 무엇을 건질지는 config.json 의 keywords 가 정한다. 이 파일은 그 규칙을 집행만 한다.
 
@@ -215,6 +216,20 @@ if (!process.stdin.isTTY) {
   process.stdin.unref?.();   // 수집이 끝났는데 stdin 때문에 프로세스가 안 끝나는 일을 막는다
 }
 
+// 시간 상한. GitHub Actions 는 timeout-minutes 를 넘기면 작업을 죽여서, 그때까지 받은 것도
+// 저장·커밋되지 않는다 (실측 2026-09-25~10-02: 매일 30분에 cancelled, 결과 0).
+// 상한이 되면 '중단' 과 똑같이 멈추고 저장한다. 차단 대기는 최대 5분이므로 여유를 두고 잡을 것.
+const maxMin = Number(flag('max-minutes', 0));
+if (maxMin > 0) {
+  setTimeout(() => {
+    if (stop) return;
+    console.log(`
+시간 상한 ${maxMin}분 — 지금까지 받은 것을 저장합니다.`);
+    notes.add(`시간 상한 ${maxMin}분에 멈춤 — 다 못 돌았습니다`);
+    stop = true;
+  }, maxMin * 60_000).unref();
+}
+
 const since = cfg.filters.sinceDate ?? null;
 const minLen = cfg.filters.minTitleLength ?? 0;
 const maxPer = cfg.filters.maxPerSite ?? Infinity;
@@ -230,6 +245,9 @@ await Promise.all(sites.map(crawlSite));
 async function crawlSite(site) {
   const ad = ADAPTERS[site.id];
   let perSite = 0;
+  // 사이트 전체에서 연속으로 못 받은 횟수. 검색어마다 새로 세면, 막힌 사이트를
+  // 검색어 수만큼 계속 두드리며 매번 벌점 대기(최대 5분)를 치른다.
+  let siteFailRun = 0;
   // browse 모드: 검색을 쓰지 않고 게시판 목록을 훑는다. 키워드는 받아온 제목에 적용한다.
   // 검색 경로를 robots.txt 가 막아둔 사이트(루리웹)를 규칙 안에서 수집하는 길이다.
   const browsing = site.listMode === 'browse';
@@ -251,10 +269,15 @@ async function crawlSite(site) {
         const r = await fetchList(ad, site, board, q, page);
         process.stdout.write(`\r[${ad.label}/${board}] "${q ?? '목록 훑기'}" ${page}쪽 · 수집 ${st.kept} · 실패 ${st.fail} · robots차단 ${st.robots}          `);
         if (!r) {
+          if (++siteFailRun >= 6) {
+            notes.add(`${ad.label}: 연속 ${siteFailRun}번 실패 — 이 사이트는 이번 수집에서 뺌`);
+            return;
+          }
           if (++failRun >= 3) { notes.add(`${ad.label}/${board}: 연속 실패로 ${page}쪽에서 멈춤`); break; }
           continue;
         }
         failRun = 0;
+        siteFailRun = 0;
 
         let posts = [];
         try {
