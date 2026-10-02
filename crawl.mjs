@@ -130,7 +130,7 @@ async function fetchList(ad, site, board, q, page) {
   if (!g.go) {
     st.robots++;
     notes.add(`${ad.label}: robots 거부 — ${g.reason}`);
-    return null;
+    return false;   // 요청 자체를 안 했다 — 실패(null)와 구분해서 '연속 실패' 로 세지 않는다
   }
   if (g.warn) {
     notes.add(`${ad.label}: robots 가 거부하지만 정책이 warn 이라 진행함 — ${g.warn}`);
@@ -268,6 +268,9 @@ async function crawlSite(site) {
 
         const r = await fetchList(ad, site, board, q, page);
         process.stdout.write(`\r[${ad.label}/${board}] "${q ?? '목록 훑기'}" ${page}쪽 · 수집 ${st.kept} · 실패 ${st.fail} · robots차단 ${st.robots}          `);
+        // robots 가 이 경로를 막았다 — 이 검색어의 다음 쪽도 같은 경로라 넘긴다.
+        // 실패로 세면, 막힌 게시판 하나 때문에 멀쩡한 나머지 게시판까지 사이트째 빠진다.
+        if (r === false) break;
         if (!r) {
           if (++siteFailRun >= 6) {
             notes.add(`${ad.label}: 연속 ${siteFailRun}번 실패 — 이 사이트는 이번 수집에서 뺌`);
